@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="bio-data.html">Bio Data</a>
+        <a href="#schools">Schools</a> 
+        <a href="#hobbies">Hobbies</a> 
+        <a href="#work">Work Experience</a> 
+        <a href="#career_prospects">Career Prospects</a>
+    </div>
+
     <section id="header">
         <header>
-        <h1> Kisakye Alice - BLIS Student at COCIS</h1>
-        <div id="photo">
-            <img src="profile.jpg" alt="alice Kisakye" class="photo">
-        </div>
-        <nav>
-            <a href="#schools">Schools</a> |
-            <a href="#hobbies">Hobbies</a> |
-            <a href="#work">Work Experience</a> |
-            <a href="#career_prospects">Career Prospects</a>
-        </nav>
+            <span class="menu-icon" onclick="openSidebar()">&#9776;</span>
+            <h1> Kisakye Alice - BLIS Student at COCIS</h1>
+            <div id="photo">
+                <img src="profile.jpg" alt="Alice Kisakye" class="photo">
+            </div>
+            <nav>
+                <a href="#schools">Schools</a> |
+                <a href="#hobbies">Hobbies</a> |
+                <a href="#work">Work Experience</a> |
+                <a href="#career_prospects">Career Prospects</a>
+            </nav>
         </header>
     </section>
 
@@ -26,10 +37,10 @@
         <h2>Schools Attended</h2>
         <div class="schools-grid">
             <div>2006<br>ABI Kindergarten</div>
-            <div>2012<br>Hillside PS</div>
-            <div>2016<br>Seeta High School</div>
-            <div>2020<br>Namugongo SS</div>
-            <div>2023<br>Makerere University</div>
+            <div>2012<br> <a href="https://www.hillsideschoolsnaalya.com/" target="_blank">Hillside PS</a></div>
+            <div>2016<br><a href="https://seetahigh.ac.ug/" target="_blank">Seeta High School</a></div>
+            <div>2020<br><a href="https://ugandamartyrs.ac.ug/" target="_blank">Namugongo SS</a></div>
+            <div>2023<br><a href="https://mak.ac.ug/" target="_blank">Makerere University</a></div>
         </div>
     </section>
 
@@ -44,7 +55,7 @@
             <tr>
                 <td>2023</td>
                 <td>IT Intern</td>
-                <td>Huawei Technologies</td>
+                <td>Ministry of Works and Transport</td>
             </tr>
             <tr>
                 <td>2024</td>
@@ -61,8 +72,8 @@
             <li>Coding</li>
             <li>Photography</li>
             <li>Playing chess</li>
-            <li>swimming</li>
-            <li>watching movies</li>
+            <li>Swimming</li>
+            <li>Watching movies</li>
         </ul>
     </section>
 
@@ -75,6 +86,16 @@
             <li>Lead a tech startup</li>
         </ul>
     </section>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
 </body>
 </html>
 
