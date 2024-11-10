@@ -222,8 +222,30 @@ ul li:hover {
     margin-bottom: 5px;
 }
 
+/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     header h1 {
         font-size: 1.3em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .bio-header h1, .bio-section h2 {
+        font-size: 1.2em;
+    }
+
+    .schools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    ul li {
+        font-size: 0.85em;
+        padding: 8px;
     }
 }
