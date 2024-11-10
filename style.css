@@ -5,6 +5,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* General Body Styling */
 body {
     display: flex;
     flex-direction: column;
@@ -13,12 +14,10 @@ body {
     background-color: #708090;
 }
 
+/* Header Section */
 header {
     text-align: center;
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 header h1 {
@@ -27,12 +26,11 @@ header h1 {
     color: #2e3d49;
 }
 
+/* Navigation Styling */
 header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: inline-flex;
     gap: 10px;
-    width: 100%;
+    font-weight: bold;
 }
 
 header nav a {
@@ -41,7 +39,6 @@ header nav a {
     padding: 5px 10px;
     border-radius: 5px;
     transition: color 0.3s ease, background-color 0.3s ease;
-    white-space: nowrap;
 }
 
 header nav a:hover {
@@ -49,6 +46,7 @@ header nav a:hover {
     background-color: #52eff2;
 }
 
+/* Profile Photo Styling */
 #photo {
     float: left;
     margin-bottom: 15px;
@@ -67,6 +65,7 @@ header nav a:hover {
     transform: scale(1.1);
 }
 
+/* General Section Styling */
 section {
     width: 100%;
     max-width: 600px;
@@ -79,6 +78,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Schools Section */
 .schools-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -102,6 +102,7 @@ section {
     background-color: #b7d3e9;
 }
 
+/* Work Experience Table */
 #work table {
     width: 100%;
     border-collapse: collapse;
@@ -122,6 +123,7 @@ section {
     text-align: center;
 }
 
+/* List Styling */
 ul {
     list-style-type: none;
     margin: 10px 0;
@@ -144,42 +146,84 @@ ul li:hover {
     transform: translateX(5px);
 }
 
-/* Responsive Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
+/* Sidebar Menu */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #52eff2;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 1.5em;
+    color: #f1f1f1;
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu-icon:hover {
+    color: #52eff2;
+}
+
+/* Bio Data Sections */
+.bio-header h1 {
+    color: #2e3d49;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+}
+
+.bio-section {
+    margin-bottom: 20px;
+    background-color: #e6f1f5;
+    border: 1px solid #cdd7de;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.bio-section h2 {
+    color: #2e3d49;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.bio-section ul li, .bio-section p {
+    color: #2e3d49;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
     header h1 {
         font-size: 1.3em;
-    }
-
-    section {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    .schools-grid {
-        grid-template-columns: 1fr;
-    }
-
-    ul li {
-        font-size: 0.85em;
-        padding: 8px;
-    }
-
-    /* Adjustments for "Career Prospects" Section */
-    #career_prospects ul {
-        padding-left: 0;
-    }
-
-    #career_prospects ul li {
-        padding: 10px;
-        font-size: 0.9em;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 5px;
     }
 }
